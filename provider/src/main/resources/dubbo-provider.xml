@@ -18,8 +18,10 @@
     <!-- 配置监控中心 ycn 2019/8/9 9:06 -->
     <dubbo:monitor protocol="registry"></dubbo:monitor>
 
-    <!-- 声明要暴露的服务接口 ycn 2019/8/7 8:50 -->
-    <dubbo:service interface="com.ycn.dubbo.common.service.UserService" ref="userServiceProvider">
+    <!-- 声明要暴露的服务接口
+            多版本version控制
+    ycn 2019/8/7 8:50 -->
+    <dubbo:service interface="com.ycn.dubbo.common.service.UserService" ref="userServiceProvider" version="1.0.0">
         <!--dubbo缺省配置的(timeout)超时时间为1000ms，远程服务调用重试次数(retries)不包括第一次调用为2，
         在这儿单独给方法配置一下超时和重试次数-->
         <dubbo:method name="saveUser" timeout="5000" retries="0"/>

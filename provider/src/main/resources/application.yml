@@ -51,20 +51,20 @@ pagehelper:
   params: count=countSql
 
 # dubbo配置
-dubbo:
-  application:
-    name: user-provider
-  registry:
-#    address: zookeeper://127.0.0.1:2181
-    address: 127.0.0.1:2181
-    protocol: zookeeper
-  protocol:
-    name: dubbo
-    host: 127.0.0.1
-    port: 20888
-  provider:
-    host: 127.0.0.1
-    version: 1.0.0
-  monitor:
-    protocol: registry
+#dubbo:
+#  application:
+#    name: user-provider
+#  registry:
+##    address: zookeeper://127.0.0.1:2181
+#    address: 127.0.0.1:2181
+#    protocol: zookeeper
+#  protocol:
+#    name: dubbo
+#    host: 127.0.0.1
+#    port: 20888
+#  provider:
+#    host: 127.0.0.1
+#    version: 1.0.0
+#  monitor:
+#    protocol: registry
 
