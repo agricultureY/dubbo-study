@@ -15,5 +15,8 @@
     <dubbo:registry address="zookeeper://127.0.0.1:2181"/>
     <!-- 生成远程服务代理，可以和本地bean一样使用Service ycn 2019/8/7 8:54 -->
     <dubbo:reference id="user-service-customer" interface="com.ycn.dubbo.common.service.UserService"/>
+    <!-- 配置监控中心 ycn 2019/8/8 17:14 -->
+    <dubbo:monitor protocol="registry"></dubbo:monitor>
+    <!--<dubbo:monitor address="127.0.0.1:7070"></dubbo:monitor>-->
 
 </beans>

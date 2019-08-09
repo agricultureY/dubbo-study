@@ -7,7 +7,7 @@
     <version>${parent.version}</version>
     <packaging>jar</packaging>
     <name>provider</name>
-    <description>provider 服务生产者</description>
+    <description>整合springboot provider 服务生产者</description>
 
     <parent>
         <groupId>com.ycn.dubbo</groupId>

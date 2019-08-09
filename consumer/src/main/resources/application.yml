@@ -4,6 +4,7 @@ server:
 spring:
   application:
     name: user-consumer
+#  数据源配置
   datasource:
     name: test
     type: com.alibaba.druid.pool.DruidDataSource
@@ -37,6 +38,7 @@ spring:
     database: mysql
     show-sql: true
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+# mybatis配置
 mybatis:
   mapper-locations: classpath:mapper/**/*.xml # 对应mapper映射xml文件的所在路径
   type-aliases-package: com.ycn.dubbo.common.entity # 对应实体类的路径
@@ -47,3 +49,15 @@ pagehelper:
   reasonable: false # 取消分页合理化
   support-methods-arguments: true
   params: count=countSql
+# dubbo配置
+dubbo:
+  application:
+    name: user-consumer
+  registry:
+    address: zookeeper://127.0.0.1:2181
+  consumer:
+    check: false
+    loadbalance: leastactive
+    version: 1.0.0
+  monitor:
+    protocol: registry

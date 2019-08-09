@@ -1,5 +1,6 @@
 package com.ycn.dubbo.consumer.rest;
 
+import com.alibaba.dubbo.config.annotation.Reference;
 import com.ycn.dubbo.common.entity.TUser;
 import com.ycn.dubbo.common.response.CommonResponse;
 import com.ycn.dubbo.common.service.UserService;
@@ -20,7 +21,9 @@ import javax.ws.rs.core.MediaType;
 @RequestMapping(value = "/user", produces = MediaType.APPLICATION_JSON)
 public class UserRest {
 
-    @Autowired
+//    @Autowired
+    /** dubbo注解远程引用service服务 */
+    @Reference
     private UserService userService;
 
     /**
